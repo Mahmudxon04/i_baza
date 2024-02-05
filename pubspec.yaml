@@ -7,15 +7,19 @@ environment:
   sdk: '>=3.2.3 <4.0.0'
 
 dependencies:
+  file_picker: ^6.1.1
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.9
   gap: ^3.0.1
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  image_picker: ^1.0.7
   objectbox: ^2.4.0
   objectbox_flutter_libs: ^2.4.0
+  open_file: ^3.3.2
   path_provider: ^2.1.2
+  share_plus: ^7.2.1
   shared_preferences: ^2.2.2
   smooth_page_indicator: ^1.1.0
 

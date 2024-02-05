@@ -3,8 +3,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+
 import '../assets/theme/icons.dart';
 import '../assets/theme/images.dart';
+import 'login_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -30,29 +32,53 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          GestureDetector(
-            onTap: () {},
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(170, 70, 0, 0),
-              child: Container(
-                child: Row(
-                  children: [
-                    const Text("O‘tkazib yuborish"),
-                    const SizedBox(
-                      width: 5,
-                    ),
-                    SvgPicture.asset(AppIcons.next)
-                  ],
+          Row(
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 70, 0, 0),
+                child: SvgPicture.asset(
+                  AppIcons.flag,
+                  width: 24,
+                  height: 24,
                 ),
-                width: 160,
-                height: 35,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey),
               ),
-            ),
+              SizedBox(
+                width: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 70, 0, 0),
+                child: Text("O'zbekcha"),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 70, 0, 0),
+                child: SvgPicture.asset(AppIcons.down),
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(70, 70, 0, 0),
+                  child: Container(
+                    child: Row(
+                      children: [
+                        Text("O‘tkazib yuborish"),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        SvgPicture.asset(AppIcons.next)
+                      ],
+                    ),
+                    width: 160,
+                    height: 35,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.grey),
+                  ),
+                ),
+              ),
+            ],
           ),
-          const Gap(97),
+          Gap(140),
           SizedBox(
             height: size.height * 0.625,
             child: PageView(
@@ -65,22 +91,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               children: [
                 Column(
                   children: [
-                    const Gap(150),
+                    Gap(150),
                     Image.asset(AppImages.location),
                   ],
                 ),
                 Column(
                   children: [
-                    const Gap(85),
+                    Gap(85),
                     Image.asset(AppImages.gift),
                   ],
                 ),
                 Column(
                   children: [
-                    const Gap(150),
+                    Gap(140),
                     Image.asset(AppImages.rocket),
                   ],
-                ),
+                )
               ],
             ),
           ),
@@ -128,11 +154,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   )
                 else
-                  const Gap(50),
+                  Gap(50),
                 SmoothPageIndicator(
                   controller: pageController,
                   count: 3,
-                  effect: const ExpandingDotsEffect(
+                  effect: ExpandingDotsEffect(
                     activeDotColor: Colors.grey,
                     dotWidth: 8,
                     dotHeight: 8,
@@ -144,6 +170,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 GestureDetector(
                   onTap: () {
                     if (page == 2) {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => LoginScreen(),
+                      ));
                     } else if (page == 1) {
                       pageController.nextPage(
                         duration: const Duration(milliseconds: 250),

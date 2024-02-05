@@ -9,5 +9,11 @@ class AppIcons {
   static const location="${icon}location.svg";
   static const next="${icon}next.svg";
   static const previous="${icon}previous.svg";
+  static const flag="${icon}flag.svg";
+  static const down="${icon}down.svg";
+  static const cancel = "${icon}cancel.svg";
+  static const search = "${icon}search.svg";
+  static const up = "${icon}up.svg";
+
 
 }

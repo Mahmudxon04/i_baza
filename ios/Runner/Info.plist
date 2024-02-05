@@ -45,5 +45,19 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+      <string>The image_picker plugin requires this description</string>
+
+      <key>NSCameraUsageDescription</key>
+      <string>The image_picker plugin requires this description</string>
+
+      <key>NSMicrophoneUsageDescription</key>
+      <string>The image_picker plugin requires this description</string>
+<key>NSAppleMusicUsageDescription</key>
+<string>Explain why your app uses music</string>
+<key>UISupportsDocumentBrowser</key>
+<true/>
+<key>LSSupportsOpeningDocumentsInPlace</key>
+<true/>
 </dict>
 </plist>
