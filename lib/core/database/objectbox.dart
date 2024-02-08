@@ -1,20 +1,28 @@
+import 'package:objectbox/objectbox.dart';
 import 'package:path_provider/path_provider.dart';
-import '../../objectbox.g.dart';
-class LocalDatabase {
-  static LocalDatabase? _database;
-  static Store? _store;
 
-  static Future<LocalDatabase> getInstance() async {
-    if (_database == null) {
+import '../../objectbox.g.dart';
+
+class LocalDataBase {
+  static LocalDataBase? _dataBase;
+  static Store? _store;
+  static Future<LocalDataBase> getInstance() async {
+    if (_dataBase == null) {
       _store = await _init();
-      _database = LocalDatabase._();
+      await _init();
+      _dataBase = LocalDataBase._();
     }
-    return _database!;
+
+    return _dataBase!;
   }
+
   static Future<Store> _init() async {
-    final appDocumentDir = await getApplicationDocumentsDirectory();
-    final store = await openStore(directory: '${appDocumentDir.path}/database');
+    final applicationDirectory = await getApplicationDocumentsDirectory();
+
+    final store =
+        await openStore(directory: "${applicationDirectory.path}/dataBase");
     return store;
   }
-  LocalDatabase._();
+
+  LocalDataBase._();
 }

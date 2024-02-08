@@ -19,21 +19,24 @@ class AuthenticatedUserModelAdapter
     };
     return AuthenticatedUserModel(
       id: fields[0] as String,
-      firstName: fields[1] as String,
-      lastName: fields[2] as String,
+      fish: fields[1] as String,
+      address: fields[2] as String,
+      imgurl: fields[3] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, AuthenticatedUserModel obj) {
     writer
-      ..writeByte(3)
+      ..writeByte(4)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
-      ..write(obj.firstName)
+      ..write(obj.fish)
       ..writeByte(2)
-      ..write(obj.lastName);
+      ..write(obj.address)
+      ..writeByte(3)
+      ..write(obj.imgurl);
   }
 
   @override

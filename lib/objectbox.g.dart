@@ -20,18 +20,18 @@ export 'package:objectbox/objectbox.dart'; // so that callers only have to impor
 
 final _entities = <ModelEntity>[
   ModelEntity(
-      id: const IdUid(1, 2357178356008787161),
+      id: const IdUid(1, 6282182693453795906),
       name: 'SavedCart',
-      lastPropertyId: const IdUid(2, 4506237971497662387),
+      lastPropertyId: const IdUid(2, 740544434858462345),
       flags: 0,
       properties: <ModelProperty>[
         ModelProperty(
-            id: const IdUid(1, 4719876545601277048),
+            id: const IdUid(1, 1831501654907471235),
             name: 'id',
             type: 6,
             flags: 1),
         ModelProperty(
-            id: const IdUid(2, 4506237971497662387),
+            id: const IdUid(2, 740544434858462345),
             name: 'name',
             type: 9,
             flags: 0)
@@ -67,7 +67,7 @@ Future<Store> openStore(
 ModelDefinition getObjectBoxModel() {
   final model = ModelInfo(
       entities: _entities,
-      lastEntityId: const IdUid(1, 2357178356008787161),
+      lastEntityId: const IdUid(1, 6282182693453795906),
       lastIndexId: const IdUid(0, 0),
       lastRelationId: const IdUid(0, 0),
       lastSequenceId: const IdUid(0, 0),
