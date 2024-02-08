@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:i_baza/features/profile/prezentation/pages/profile.dart';
 import 'package:image_picker/image_picker.dart';
 
 
@@ -71,7 +72,7 @@ class _MainAppState extends State<MainApp> {
     return MaterialApp(
       theme: ThemeManager.darkTheme(),
       debugShowCheckedModeBanner: false,
-      home: ProfileMainScreen(),
+      home: ProfileScreen(),
       // home: Scaffold(
       //     appBar: AppBar(
       //       title: Text("Image Picker"),
