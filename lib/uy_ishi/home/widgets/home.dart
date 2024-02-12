@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:i_baza/core/route/basket_route.dart';
 import 'package:i_baza/core/route/catalog_route.dart';
+import 'package:i_baza/core/route/main_route.dart';
+import 'package:i_baza/core/route/profile_route.dart';
+import 'package:i_baza/core/route/sell_route.dart';
 
 import 'destination.dart';
 
@@ -36,7 +40,11 @@ class _HomePageState extends State<HomePage> {
             child: IndexedStack(
               index: index,
               children: const [
+                DestinationPage(onGenerateRoute: MainRoute.onGenerateRoute),
                 DestinationPage(onGenerateRoute: CatalogRoute.onGenerateRoute),
+                DestinationPage(onGenerateRoute: SellRoute.onGenerateRoute),
+                DestinationPage(onGenerateRoute: BasketRoute.onGenerateRoute),
+                DestinationPage(onGenerateRoute: ProfileRoute.onGenerateRoute),
               ],
             ),
           ),
