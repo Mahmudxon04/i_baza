@@ -63,8 +63,6 @@ class _CatalogScreenState extends State<CatalogScreen> {
               childAspectRatio: 164 / 315,
             ),
             itemBuilder: (context, index) {
-              print(
-                  "---------------------------------------------$index------------------------------------------------------------------------");
               return Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
