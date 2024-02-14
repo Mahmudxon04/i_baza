@@ -50,10 +50,9 @@ class _HomePageState extends State<HomePage> {
           ),
           Container(
             width: double.maxFinite,
-            height: 70 + MediaQuery.of(context).padding.top,
-            decoration:  BoxDecoration(
+            height: 80 + MediaQuery.of(context).padding.top,
+            decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.4),
-
             ),
             child: Row(
               children: List.generate(
@@ -66,7 +65,10 @@ class _HomePageState extends State<HomePage> {
                             () {},
                           );
                         },
-                        child:  SvgPicture.asset(icons[index],color: const Color(0xFFD7D7D7),),
+                        child: SvgPicture.asset(
+                          icons[index],
+                          color: const Color(0xFFD7D7D7),
+                        ),
                       ))),
             ),
           ),
