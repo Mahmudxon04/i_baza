@@ -44,7 +44,6 @@ class _CatalogScreenState extends State<CatalogScreen> {
     "84 000 UZS",
     "84 000 UZS",
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
