@@ -53,37 +53,3 @@ var data = <String,dynamic>{
 };
 
 
-final picture = [
-  'lib/assets/images/img1.png',
-  'lib/assets/images/img2.png',
-  'lib/assets/images/img3.png',
-  'lib/assets/images/img4.png',
-  'lib/assets/images/img5.png',
-  'lib/assets/images/img6.png'
-];
-final name = [
-  "KNAUF",
-  "Quelyd",
-  "Matrix",
-  "MAPEI",
-  "PUMA",
-  "Snegurochka",
-];
-
-final descriptionProduct = [
-  "Shtukaturka ROTBAND KNAUF",
-  "Quelyd” Gul qog‘ozlar uchun yelim",
-  "Matrix kesish uchun maxsus asbob",
-  "Ultracolor Plus”dan maxsus jamlanma",
-  "Krasovki. Puma Ferrari Drift Cat 5 Ultra.",
-  "Snegurochka” A4 500 varaq",
-];
-
-final price = [
-  "84 000 UZS",
-  "84 000 UZS",
-  "84 000 UZS",
-  "41 500 UZS",
-  "84 000 UZS",
-  "84 000 UZS",
-];

@@ -53,6 +53,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
+          shrinkWrap: true,
             //998833180
             itemCount: 6,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
